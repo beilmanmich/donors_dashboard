@@ -27,9 +27,9 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/donorschoose/projects")
+@app.route("/donorschoosedashboard/projects")
 def donorschoose_projects():
-    connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
+    connection = MongoClient(uri)
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find( {} ,FIELDS)
     #projects = collection.find(projection=FIELDS)
