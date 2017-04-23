@@ -28,12 +28,12 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/projects") #/donorschoose/projects
+@app.route("/donorschoose/projects") #/donorschoose/projects
 def donorschoose_projects():
     connection = MongoClient(MONGO_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find(projection=FIELDS, limit=25)
-    #projects = collection.find( {} ,FIELDS, limit=5000)
+    #projects = collection.find(projection=FIELDS, limit=25)
+    projects = collection.find( {} ,FIELDS, limit=25)
     #projects = collection.find(projection=FIELDS)
     json_projects = []
     for project in projects:
