@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
 from pymongo import MongoClient
-from pymongo import Connection
+import pymongo
 import json
 from bson import json_util
 from bson.json_util import dumps
@@ -10,9 +10,9 @@ import os #
 
 app = Flask(__name__)
 
-url = os.getenv('MONGOLAB_URI', 'mongodb://ltest:test@ds115671.mlab.com:15671/herokup_rqr408rd')
+uri = 'mongodb://ltest:test@ds115671.mlab.com:15671/herokup_rqr408rd'
 
-client = MongoClient(os.environ['MONGOLAB_URI'])
+client = MongoClient(uri)
 db = client.get_default_database()
 
 MONGODB_HOST = 'localhost'
