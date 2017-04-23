@@ -1,1 +1,1 @@
-web: gunicorn school_donations:app
+web: gunicorn school_donations:app --timeout 15 --keep-alive 5 --log-level debug
