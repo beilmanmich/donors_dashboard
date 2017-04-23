@@ -28,7 +28,7 @@ app = Flask(__name__)
 #MONGODB_HOST = 'localhost'
 #MONGODB_PORT = 27017
 #user:pass@PORT ...
-MONGO_URI = os.environ.get('mongodb://fuck:fuck@ds115411.mlab.com:15411/mb_donorschoose') #'mongodb://admin:tdi_test2020@ds115411.mlab.com:15411/mb_donorschoose'
+MONGO_URI = 'mongodb://admin:tdi_test2020@ds115411.mlab.com:15411/mb_donorschoose' #'mongodb://admin:tdi_test2020@ds115411.mlab.com:15411/mb_donorschoose'
 DBS_NAME = 'mb_donorschoose'
 COLLECTION_NAME = 'projects'
 FIELDS = {'school_state': True, 'resource_type': True, 'poverty_level': True, 'date_posted': True, 'total_donations': True, '_id': False}
