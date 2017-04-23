@@ -44,7 +44,7 @@ def donorschoose_projects():
     connection = MongoClient(MONGO_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
     #projects = collection.find(projection=FIELDS, limit=25)
-    projects = collection.find( {} ,FIELDS, limit=25).sort("_id", 1).limit(20000)
+    projects = collection.find( {} ,FIELDS, limit=25).sort("_id", 1).limit(100000)
     #projects = collection.find(projection=FIELDS)
     json_projects = []
     for project in projects:
