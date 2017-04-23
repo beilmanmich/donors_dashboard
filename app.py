@@ -5,19 +5,20 @@ import pymongo
 import json
 from bson import json_util
 from bson.json_util import dumps
-from urlparse import urlsplit #
-import os #
+
 
 app = Flask(__name__)
 
-uri = 'mongodb://ltest:test@ds115671.mlab.com:15671/herokup_rqr408rd'
+# uri = 'mongodb://ltest:test@ds115671.mlab.com:15671/herokup_rqr408rd'
+# client = MongoClient(uri)
+# db = client.get_default_database()
 
-client = MongoClient(uri)
-db = client.get_default_database()
-
+#MONGODB_HOST & MONDB_PORT Don't matter for heroku deploy - keep for local testing.
 MONGODB_HOST = 'localhost'
-MONGODB_PORT = 15671
-DBS_NAME = 'donorschoosedashboard'
+MONGODB_PORT = 27017
+#user:pass@PORT ...
+MONGO_URI = 'mongodb://test:test@ds115671.mlab.com:15671/herokup_rqr408rd'
+DBS_NAME = 'herokup_rqr408rd'
 COLLECTION_NAME = 'projects'
 FIELDS = {'school_state': True, 'resource_type': True, 'poverty_level': True, 'date_posted': True, 'total_donations': True, '_id': False}
 
@@ -27,9 +28,9 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/donorschoosedashboard/projects")
+@app.route("/donorschoose/projects")
 def donorschoose_projects():
-    connection = MongoClient(uri)
+    connection = MongoClient(MONGO_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find( {} ,FIELDS)
     #projects = collection.find(projection=FIELDS)
@@ -41,4 +42,4 @@ def donorschoose_projects():
     return json_projects
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=5000,debug=True)
+    app.run(debug=True) #keep for local testing: host='0.0.0.0',port=5000,
