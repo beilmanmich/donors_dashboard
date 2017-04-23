@@ -1,15 +1,23 @@
 from flask import Flask
 from flask import render_template
 from pymongo import MongoClient
+from pymongo import Connection
 import json
 from bson import json_util
 from bson.json_util import dumps
+from urlparse import urlsplit #
+import os #
 
 app = Flask(__name__)
 
+url = os.getenv('MONGOLAB_URI', 'mongodb://ltest:test@ds115671.mlab.com:15671/herokup_rqr408rd')
+
+client = MongoClient(os.environ['MONGOLAB_URI'])
+db = client.get_default_database()
+
 MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
-DBS_NAME = 'donorschoose'
+MONGODB_PORT = 15671
+DBS_NAME = 'donorschoosedashboard'
 COLLECTION_NAME = 'projects'
 FIELDS = {'school_state': True, 'resource_type': True, 'poverty_level': True, 'date_posted': True, 'total_donations': True, '_id': False}
 
