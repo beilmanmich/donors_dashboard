@@ -1,10 +1,21 @@
+# from flask import Flask
+# from flask import render_template
+# from pymongo import MongoClient
+# import pymongo
+# import json
+# from bson import json_util
+# from bson.json_util import dumps
+
 from flask import Flask
 from flask import render_template
-from pymongo import MongoClient
 import pymongo
+from pymongo import MongoClient
 import json
+import os
+from urlparse import urlparse
 from bson import json_util
 from bson.json_util import dumps
+
 
 
 app = Flask(__name__)
@@ -14,11 +25,11 @@ app = Flask(__name__)
 # db = client.get_default_database()
 
 #MONGODB_HOST & MONDB_PORT Don't matter for heroku deploy - keep for local testing.
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
+#MONGODB_HOST = 'localhost'
+#MONGODB_PORT = 27017
 #user:pass@PORT ...
-MONGO_URI = 'mongodb://mb_heroku:pool3571@ds115671.mlab.com:15671/herokup_rqr408rd'
-DBS_NAME = 'herokup_rqr408rd'
+MONGO_URI = os.environ.get('mongodb://admin:tdi_test2020@ds115411.mlab.com:15411/mb_donorschoose')
+DBS_NAME = 'mb_donorschoose'
 COLLECTION_NAME = 'projects'
 FIELDS = {'school_state': True, 'resource_type': True, 'poverty_level': True, 'date_posted': True, 'total_donations': True, '_id': False}
 
@@ -28,7 +39,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/donorschoose/projects") #/donorschoose/projects
+@app.route("/mb_donorschoose/projects") #/donorschoose/projects
 def donorschoose_projects():
     connection = MongoClient(MONGO_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
