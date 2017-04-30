@@ -6,7 +6,7 @@
 
 This repository contains a clone of the repo used to create the example data dashboard linked above.
 
-The motivation of this project was to create an interactive data vizualization, hosted on Heroku (or similar) as a weekly assignment for the Data Incubator Fellowship. This project showcases interactive data visualization with D3.js, DC.js, Python, MongoDB, hosted on Heroku. MongoDB for storing and querying the data, Python for building a web server that interacts with MongoDB and serving html pages, Javascript libraries d3.js, dc.js and crossfilter.js for building interactive charts.
+The motivation of this project was to create an interactive data visualization, hosted on Heroku (or similar) as a weekly assignment for the Data Incubator Fellowship. This project showcases interactive data visualization with D3.js, DC.js, Python, MongoDB, hosted on Heroku. MongoDB for storing and querying the data, Python for building a web server that interacts with MongoDB and serving html pages, Javascript libraries d3.js, dc.js and crossfilter.js for building interactive charts.
 
 ## Getting started
 
