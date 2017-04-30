@@ -10,6 +10,8 @@ The motivation of this project was to create an interactive data visualization, 
 
 The data dashboard allows a user to stratify a subset of donations across time period, campaign resource type, campaign recipient poverty level, and state geography. The current dashboard supports 164k records from the data linked below (the full dataset contains 900k records, 164k was the limit I optimized under Heroku and mLab free subscription limits). Data licensed with thanks from DonorsChoose.org (CC_NY_BC 3.0).
 
+This is my first attempt at deploying d3.js visualizations to Heroku. In my past life, I used R Shiny for all interactive data needs.
+
 ## Getting started
 
 The dependencies for the project can be installed (in your virtual environment, venv) using
