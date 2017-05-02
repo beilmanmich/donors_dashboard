@@ -40,3 +40,5 @@ Please! Help yourself. Much of this project was built off open data sources and 
 
 One tip, when deploying to Heroku...remember to scale up a dyno after pushing any incremental changes! (This cause a lot of frustration as this was a beginner project).
 
+![dyno
+up](https://github.com/beilmanmich/donors_dashboard/blob/master/viz_demo.gif)
