@@ -2,6 +2,9 @@
 
 # Visit the interactive dashboard here: https://donorschoosedashboard.herokuapp.com/
 
+![visualization
+demo](https://github.com/beilmanmich/donors_dashboard/blob/master/viz_demo.gif)
+
 ## Background
 
 This repository contains a clone of the repo used to create the example data dashboard linked above.
