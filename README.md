@@ -38,7 +38,15 @@ and import it after gunzip
 
 Please! Help yourself. Much of this project was built off open data sources and existing Git Repos from the previous Hack4Education Challenges.
 
-One tip, when deploying to Heroku...remember to scale up a dyno after pushing any incremental changes! (This cause a lot of frustration as this was a beginner project).
+One tip, when deploying to Heroku...remember to scale up a dyno after pushing any incremental changes! (This cause a lot of frustration as this was a beginner project). Follow tutorial methods found here: https://devcenter.heroku.com/articles/getting-started-with-python#push-local-changes and here: https://devcenter.heroku.com/articles/getting-started-with-python#scale-the-app
+
+Push your repo to Git
+
+	$ heroku push
+
+Scale up your free dyno
+
+	$ heroku ps:scale web=1
 
 ![dyno
 up](https://github.com/beilmanmich/donors_dashboard/blob/master/viz_demo.gif)
