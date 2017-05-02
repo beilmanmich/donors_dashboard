@@ -33,3 +33,10 @@ To initialize the database you need to download the data, other datasets availab
 and import it after gunzip
 
     $ mongoimport -d donorschoose -c projects --type csv --file /vagrant/opendata_projects.csv -headerline
+
+## Using this Git
+
+Please! Help yourself. Much of this project was built off open data sources and existing Git Repos from the previous Hack4Education Challenges.
+
+One tip, when deploying to Heroku...remember to scale up a dyno after pushing any incremental changes! (This cause a lot of frustration as this was a beginner project).
+
