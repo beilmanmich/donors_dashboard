@@ -49,4 +49,4 @@ Scale up your free dyno
 	$ heroku ps:scale web=1
 
 ![dyno
-up](https://github.com/beilmanmich/donors_dashboard/blob/master/viz_demo.gif)
+up](https://github.com/beilmanmich/donors_dashboard/blob/master/dyno_up.png)
