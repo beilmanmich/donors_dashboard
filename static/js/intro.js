@@ -2,8 +2,6 @@
  * Intro.js v2.0
  * https://github.com/usablica/intro.js
  * MIT licensed
- *
- * Copyright (C) 2013 usabli.ca - A weekend project by Afshin Mehrabani (@afshinmeh)
  */
 
 (function (root, factory) {
